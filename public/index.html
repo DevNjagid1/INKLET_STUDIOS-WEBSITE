@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inklet Studios — Ink with Intent | Creative Design &amp; Digital Studio</title>
+  <meta name="description" content="Inklet Studios is an award-winning creative design and digital services studio in Chuka, Kenya. Posters, brand identity, bespoke web development, and design training.">
+  <meta name="keywords" content="Inklet Studios, Graphic Design Chuka, Brand Identity Kenya, Web Development Chuka, Posters Tharaka Nithi, Design Classes Kenya">
+  <meta name="author" content="Inklet Studios">
+  <link rel="canonical" href="https://inkletstudios.com/index.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Inklet Studios — Ink with Intent">
+  <meta property="og:description" content="Deliberate creative craftsmanship, brand identity, bespoke software, and design education in Chuka, Kenya.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://inkletstudios.com/index.html">
+  <meta property="og:image" content="https://inkletstudios.com/assets/brand/logo.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
+
+  <!-- Page Stylesheet (Independent) -->
+  <link rel="stylesheet" href="index.css">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://inkletstudios.com/#studio",
+        "name": "Inklet Studios",
+        "slogan": "Ink with Intent",
+        "description": "Bespoke creative design, branding, editorial print, web engineering and graphic design training.",
+        "url": "https://inkletstudios.com",
+        "logo": "https://inkletstudios.com/assets/brand/logo.svg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Chuka",
+          "addressRegion": "Tharaka Nithi County",
+          "addressCountry": "KE"
+        },
+        "telephone": "+254700000000",
+        "email": "hello@inkletstudios.com"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://inkletstudios.com/#website",
+        "url": "https://inkletstudios.com",
+        "name": "Inklet Studios",
+        "publisher": {"@id": "https://inkletstudios.com/#studio"}
+      }
+    ]
+  }
+  </script>
+
+  <!-- Page JavaScript (Independent) -->
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header" id="top">
+    <div class="header-container">
+      <a href="index.html" class="brand-link" aria-label="Inklet Studios Home">
+        <span class="brand-symbol">
+          <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+            <circle cx="16" cy="16" r="14" fill="#111827" stroke="#D4AF69" stroke-width="1.5"/>
+            <path d="M16 6 L22 15 L19.5 25 L16 26.5 L12.5 25 L10 15 Z" fill="none" stroke="#D4AF69" stroke-width="1.2"/>
+            <circle cx="16" cy="17" r="1.2" fill="#D4AF69"/>
+            <line x1="16" y1="17" x2="16" y2="26.5" stroke="#D4AF69" stroke-width="1.2"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">INKLET</span>
+          <span class="brand-sub">STUDIOS</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link active" aria-current="page">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="classes.html" class="nav-link">Classes</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Utility Actions -->
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme" type="button">
+          <span class="theme-icon-sun" aria-hidden="true">&#9728;</span>
+          <span class="theme-icon-moon" aria-hidden="true">&#9790;</span>
+        </button>
+        <a href="booking.html" class="btn btn-outline btn-sm cta-header">Start a Brief</a>
+        <button id="mobile-menu-btn" class="mobile-toggle-btn" aria-label="Open Navigation Menu" aria-expanded="false" type="button">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="mobile-nav-drawer" aria-hidden="true">
+      <nav class="mobile-nav" aria-label="Mobile Navigation">
+        <a href="index.html" class="mobile-nav-link active">Home</a>
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+        <a href="classes.html" class="mobile-nav-link">Design Classes</a>
+        <a href="about.html" class="mobile-nav-link">About Studio</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+        <a href="booking.html" class="btn btn-primary btn-block mobile-cta">Commission a Project</a>
+        <div class="mobile-meta">
+          <p>Chuka, Tharaka Nithi County, Kenya</p>
+          <p>hello@inkletstudios.com</p>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-container">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span class="badge-text">CREATIVE DESIGN &amp; DIGITAL STUDIO • CHUKA, KENYA</span>
+        </div>
+        <h1 class="hero-title">
+          Ink with <span class="gold-gradient">Intent.</span>
+        </h1>
+        <p class="hero-subtitle">
+          We reject superficial templates. Inklet Studios crafts enduring brand identities, commanding editorial print, bespoke digital software, and cinematic motion designed to elevate visionary businesses across Kenya and beyond.
+        </p>
+        <div class="hero-cta-group">
+          <a href="booking.html" class="btn btn-primary">Start Your Project Brief</a>
+          <a href="portfolio.html" class="btn btn-outline">Explore Selected Work</a>
+        </div>
+
+        <div class="hero-meta-strip">
+          <div class="meta-item">
+            <span class="meta-number">07</span>
+            <span class="meta-label">Core Creative Disciplines</span>
+          </div>
+          <div class="meta-divider" aria-hidden="true"></div>
+          <div class="meta-item">
+            <span class="meta-number">100%</span>
+            <span class="meta-label">Bespoke Vector &amp; Code Execution</span>
+          </div>
+          <div class="meta-divider" aria-hidden="true"></div>
+          <div class="meta-item">
+            <span class="meta-number">Chuka</span>
+            <span class="meta-label">Studio Base &amp; Academy</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Working Philosophy Section -->
+    <section class="philosophy-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-eyebrow">OUR ETHOS</span>
+          <h2 class="section-title">Every line deliberate. Every mark purposeful.</h2>
+        </div>
+        <div class="philosophy-grid">
+          <div class="philosophy-card">
+            <div class="card-icon">&#9670;</div>
+            <h3 class="card-title">Craft Over Convenience</h3>
+            <p class="card-desc">
+              We never surrender creative judgment to automated generators. From the first pencil thumbnail to final CMYK vector separations, every curve is drawn with conscious intention.
+            </p>
+          </div>
+          <div class="philosophy-card">
+            <div class="card-icon">&#9670;</div>
+            <h3 class="card-title">Tactile Reality</h3>
+            <p class="card-desc">
+              Print is an emotional contract. We engineer posters, foil-stamped stationery, and packaging tailored for paper stock weights, ink absorption, and real hand-to-hand impact.
+            </p>
+          </div>
+          <div class="philosophy-card">
+            <div class="card-icon">&#9670;</div>
+            <h3 class="card-title">Digital Precision</h3>
+            <p class="card-desc">
+              Our web systems are built on clean, semantic engineering without bloated dependencies. Instant response times, solid accessibility, and high search visibility are built into the foundation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="featured-section">
+      <div class="section-container">
+        <div class="section-header flex-header">
+          <div>
+            <span class="section-eyebrow">PORTFOLIO</span>
+            <h2 class="section-title">Selected Case Studies</h2>
+          </div>
+          <a href="portfolio.html" class="view-all-link">View Complete Archive &rarr;</a>
+        </div>
+
+        <div id="featured-projects-grid" class="projects-grid">
+          <!-- Fallback items that are instantly visible, updated via index.js API fetch -->
+          <article class="project-card">
+            <a href="project.html?slug=kipawa-coffee-roasters-identity" class="project-media-link" aria-label="View Kipawa Coffee Roasters project">
+              <img src="assets/projects/kipawa-cover.svg" alt="Kipawa Coffee Roasters Identity" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <span class="overlay-tag">Brand Identity</span>
+                <span class="overlay-action">Inspect Brief &rarr;</span>
+              </div>
+            </a>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-cat">Brand Identity &amp; Logos</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title">
+                <a href="project.html?slug=kipawa-coffee-roasters-identity">Kipawa Coffee Roasters — Visual Identity</a>
+              </h3>
+              <p class="project-excerpt">A grounded, heritage-rich identity for a specialty highlands coffee brand rooted in Mount Kenya foothills.</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <a href="project.html?slug=mt-kenya-creative-summit-poster" class="project-media-link" aria-label="View Mount Kenya Creative Summit project">
+              <img src="assets/projects/summit-cover.svg" alt="Mount Kenya Creative Summit poster" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <span class="overlay-tag">Posters &amp; Print</span>
+                <span class="overlay-action">Inspect Brief &rarr;</span>
+              </div>
+            </a>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-cat">Posters &amp; Editorial Print</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title">
+                <a href="project.html?slug=mt-kenya-creative-summit-poster">Mount Kenya Creative Summit — Poster Series</a>
+              </h3>
+              <p class="project-excerpt">A striking visual campaign and editorial poster series celebrating creative entrepreneurship in Eastern Kenya.</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <a href="project.html?slug=boma-timber-crafts-web" class="project-media-link" aria-label="View Boma Timber Crafts project">
+              <img src="assets/projects/boma-cover.svg" alt="Boma Timber Crafts website interface" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <span class="overlay-tag">Web Development</span>
+                <span class="overlay-action">Inspect Brief &rarr;</span>
+              </div>
+            </a>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-cat">Software &amp; Web Development</span>
+                <span class="project-year">2025</span>
+              </div>
+              <h3 class="project-title">
+                <a href="project.html?slug=boma-timber-crafts-web">Boma Timber Crafts — Web Platform</a>
+              </h3>
+              <p class="project-excerpt">A lightweight, bespoke digital catalog and custom commission booking platform for artisanal woodworkers.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- The 7 Disciplines Overview -->
+    <section class="services-overview-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-eyebrow">CAPABILITIES</span>
+          <h2 class="section-title">The Seven Studio Disciplines</h2>
+          <p class="section-desc">Comprehensive creative solutions structured for clarity, commercial utility, and measurable visual distinction.</p>
+        </div>
+
+        <div class="services-list-grid">
+          <div class="service-item-row">
+            <span class="service-index">01</span>
+            <div class="service-info">
+              <h3 class="service-name">Posters, Banners, Flyers &amp; Brochures</h3>
+              <p class="service-summary">Large-format outdoor banners, folded brochures, and cultural event posters tuned for ink-on-paper reality.</p>
+            </div>
+            <a href="services.html#service-1" class="service-link-arrow" aria-label="Explore posters and print deliverables">&rarr;</a>
+          </div>
+
+          <div class="service-item-row">
+            <span class="service-index">02</span>
+            <div class="service-info">
+              <h3 class="service-name">Brand Identity &amp; Logo Design</h3>
+              <p class="service-summary">Strategic vector logomarks, comprehensive brand guidelines books, color palettes, and typographic hierarchies.</p>
+            </div>
+            <a href="services.html#service-2" class="service-link-arrow" aria-label="Explore brand identity deliverables">&rarr;</a>
+          </div>
+
+          <div class="service-item-row">
+            <span class="service-index">03</span>
+            <div class="service-info">
+              <h3 class="service-name">Business Cards &amp; Product Mockups</h3>
+              <p class="service-summary">Tactile business cards (foil stamp, blind deboss) and photorealistic 3D product visualization scenes.</p>
+            </div>
+            <a href="services.html#service-3" class="service-link-arrow" aria-label="Explore stationery and mockups deliverables">&rarr;</a>
+          </div>
+
+          <div class="service-item-row">
+            <span class="service-index">04</span>
+            <div class="service-info">
+              <h3 class="service-name">Software &amp; Web Development</h3>
+              <p class="service-summary">Hand-crafted, performance-first web platforms, booking systems, and custom administrative interfaces.</p>
+            </div>
+            <a href="services.html#service-4" class="service-link-arrow" aria-label="Explore software and web deliverables">&rarr;</a>
+          </div>
+
+          <div class="service-item-row">
+            <span class="service-index">05</span>
+            <div class="service-info">
+              <h3 class="service-name">Video Editing &amp; Motion Graphics</h3>
+              <p class="service-summary">Cinematic documentary pacing, kinetic typography reels, and animated brand identity lower thirds.</p>
+            </div>
+            <a href="services.html#service-5" class="service-link-arrow" aria-label="Explore video editing deliverables">&rarr;</a>
+          </div>
+
+          <div class="service-item-row">
+            <span class="service-index">06</span>
+            <div class="service-info">
+              <h3 class="service-name">Content &amp; Social Media Design</h3>
+              <p class="service-summary">High-conversion educational carousels, monthly cohesive feed systems, and campaign visual narratives.</p>
+            </div>
+            <a href="services.html#service-6" class="service-link-arrow" aria-label="Explore social content deliverables">&rarr;</a>
+          </div>
+
+          <div class="service-item-row">
+            <span class="service-index">07</span>
+            <div class="service-info">
+              <h3 class="service-name">Graphic Design Classes &amp; Training</h3>
+              <p class="service-summary">Mentorship-driven graphic design training cohorts in Chuka teaching fundamentals, software, and craft.</p>
+            </div>
+            <a href="classes.html" class="service-link-arrow" aria-label="Explore graphic design classes">&rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Graphic Design Academy Promotion -->
+    <section class="academy-promo-section">
+      <div class="section-container">
+        <div class="academy-box">
+          <div class="academy-content">
+            <span class="badge-gold">INKLET DESIGN ACADEMY • CHUKA</span>
+            <h2 class="academy-title">Master the craft of visual intention.</h2>
+            <p class="academy-desc">
+              Join our intensive in-person and hybrid design training in Chuka. Learn foundational typography, grid geometry, Adobe Illustrator, brand identity systems, and professional freelance client practices.
+            </p>
+            <ul class="academy-features">
+              <li>Small mentorship cohorts (max 12 students)</li>
+              <li>Real client briefs and portfolio critiques</li>
+              <li>Certificate of completion &amp; industry launch blueprint</li>
+            </ul>
+            <div class="academy-actions">
+              <a href="classes.html" class="btn btn-primary">Inspect Course Syllabi</a>
+              <span class="academy-subtext">Cohorts enroll quarterly in Chuka</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Enquiry CTA Strip -->
+    <section class="enquiry-cta-section">
+      <div class="section-container">
+        <div class="cta-banner">
+          <span class="section-eyebrow">COMMISSION A PROJECT</span>
+          <h2 class="cta-title">Ready to bring deliberate intention to your brand?</h2>
+          <p class="cta-text">
+            Submit a structured brief with your objectives, timeline, and budget. Our studio team in Chuka will review your project and schedule a consultation.
+          </p>
+          <div class="cta-buttons">
+            <a href="booking.html" class="btn btn-primary btn-lg">Submit Project Brief</a>
+            <a href="contact.html" class="btn btn-outline btn-lg">Direct WhatsApp / Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <div class="footer-logo">
+            <span class="brand-title">INKLET</span>
+            <span class="brand-sub">STUDIOS</span>
+          </div>
+          <p class="footer-philosophy">“Ink with Intent”</p>
+          <p class="footer-bio">
+            A creative design and digital services studio based in Chuka, Kenya. Dedicated to authentic visual craftsmanship, strategic branding, bespoke web engineering, and design education.
+          </p>
+          <p class="footer-location">
+            <strong>Location:</strong> Chuka, Tharaka Nithi County, Kenya
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#service-1">Posters &amp; Print</a></li>
+            <li><a href="services.html#service-2">Brand Identity &amp; Logos</a></li>
+            <li><a href="services.html#service-3">Stationery &amp; Mockups</a></li>
+            <li><a href="services.html#service-4">Software &amp; Web Development</a></li>
+            <li><a href="services.html#service-5">Motion Graphics &amp; Video</a></li>
+            <li><a href="services.html#service-6">Social Media Content</a></li>
+            <li><a href="classes.html">Design Classes &amp; Training</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-heading">Studio</h4>
+          <ul class="footer-links">
+            <li><a href="portfolio.html">Portfolio Archive</a></li>
+            <li><a href="about.html">About the Studio</a></li>
+            <li><a href="classes.html">Design Academy</a></li>
+            <li><a href="booking.html">Booking &amp; Commission</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Client &amp; Admin Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-heading">Direct Connect</h4>
+          <p class="footer-contact-item"><strong>Email:</strong> <a href="mailto:hello@inkletstudios.com">hello@inkletstudios.com</a></p>
+          <p class="footer-contact-item"><strong>WhatsApp:</strong> <a href="https://wa.me/254700000000" target="_blank" rel="noopener noreferrer">+254 700 000 000</a></p>
+          <p class="footer-contact-item"><strong>Response SLA:</strong> Within 24-48 business hours</p>
+          <div class="footer-socials">
+            <a href="https://instagram.com/inkletstudios" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+            <a href="https://behance.net/inkletstudios" target="_blank" rel="noopener noreferrer" aria-label="Behance">Behance</a>
+            <a href="https://linkedin.com/company/inkletstudios" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://x.com/inkletstudios" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">X</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Inklet Studios. All rights reserved. “Ink with Intent” is a philosophy of craftsmanship.</p>
+        <div class="footer-legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <span class="sep">&bull;</span>
+          <a href="terms.html">Terms of Service</a>
+          <span class="sep">&bull;</span>
+          <a href="#top">Back to Top &uarr;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commission a Project — Inklet Studios | Structured Booking Brief</title>
+  <meta name="description" content="Submit a structured project brief to Inklet Studios in Chuka, Kenya. Direct commissioning for brand identity, editorial print, web software, motion graphics, and design training.">
+  <link rel="canonical" href="https://inkletstudios.com/booking.html">
+
+  <meta property="og:title" content="Commission a Project — Inklet Studios">
+  <meta property="og:description" content="Submit your project requirements, scope, budget, and desired deadline for deliberate creative review.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://inkletstudios.com/booking.html">
+  <meta property="og:image" content="https://inkletstudios.com/assets/brand/logo.svg">
+
+  <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
+  <link rel="stylesheet" href="booking.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="booking.js" defer></script>
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header" id="top">
+    <div class="header-container">
+      <a href="index.html" class="brand-link" aria-label="Inklet Studios Home">
+        <span class="brand-symbol">
+          <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+            <circle cx="16" cy="16" r="14" fill="#111827" stroke="#D4AF69" stroke-width="1.5"/>
+            <path d="M16 6 L22 15 L19.5 25 L16 26.5 L12.5 25 L10 15 Z" fill="none" stroke="#D4AF69" stroke-width="1.2"/>
+            <circle cx="16" cy="17" r="1.2" fill="#D4AF69"/>
+            <line x1="16" y1="17" x2="16" y2="26.5" stroke="#D4AF69" stroke-width="1.2"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">INKLET</span>
+          <span class="brand-sub">STUDIOS</span>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="classes.html" class="nav-link">Classes</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme" type="button">
+          <span class="theme-icon-sun" aria-hidden="true">&#9728;</span>
+          <span class="theme-icon-moon" aria-hidden="true">&#9790;</span>
+        </button>
+        <button id="mobile-menu-btn" class="mobile-toggle-btn" aria-label="Open Navigation Menu" aria-expanded="false" type="button">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="mobile-nav-drawer" aria-hidden="true">
+      <nav class="mobile-nav" aria-label="Mobile Navigation">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+        <a href="classes.html" class="mobile-nav-link">Design Classes</a>
+        <a href="about.html" class="mobile-nav-link">About Studio</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="booking-hero">
+      <div class="hero-container">
+        <span class="section-eyebrow">COMMISSION INITIATION</span>
+        <h1 class="booking-hero-title">Start with Intent.</h1>
+        <p class="booking-hero-desc">
+          Every enduring project begins with a clear, deliberate brief. Share your requirements below to receive a detailed scope consultation from our studio in Chuka.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Booking Section -->
+    <section class="booking-form-section">
+      <div class="section-container form-layout">
+        <!-- Form Container -->
+        <div class="form-wrapper">
+          <div class="form-card">
+            <!-- Alert / Notification Banner -->
+            <div id="booking-alert" class="booking-alert" role="alert" style="display: none;"></div>
+
+            <form id="project-booking-form" novalidate>
+              <!-- Honeypot anti-spam field (hidden) -->
+              <div class="hp-field" aria-hidden="true">
+                <label for="website_hp">Leave this empty</label>
+                <input type="text" id="website_hp" name="website_hp" tabindex="-1" autocomplete="off">
+              </div>
+
+              <!-- Step 1: Client Information -->
+              <fieldset class="form-step">
+                <legend class="step-legend">01. Client &amp; Contact Details</legend>
+                <div class="form-row grid-2">
+                  <div class="form-group">
+                    <label for="client_name" class="form-label">Full Name or Organization <span class="required">*</span></label>
+                    <input type="text" id="client_name" name="client_name" class="form-input" required placeholder="e.g. Grace Wanjiku / Kipawa Co.">
+                    <span class="field-error" id="err-client_name"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="client_email" class="form-label">Email Address <span class="required">*</span></label>
+                    <input type="email" id="client_email" name="client_email" class="form-input" required placeholder="name@domain.com">
+                    <span class="field-error" id="err-client_email"></span>
+                  </div>
+                </div>
+
+                <div class="form-row grid-2">
+                  <div class="form-group">
+                    <label for="client_phone" class="form-label">Telephone or WhatsApp Number</label>
+                    <input type="tel" id="client_phone" name="client_phone" class="form-input" placeholder="+254 7XX XXX XXX">
+                    <span class="field-error" id="err-client_phone"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="preferred_channel" class="form-label">Preferred Communication Channel</label>
+                    <select id="preferred_channel" name="preferred_channel" class="form-select">
+                      <option value="email">Official Email</option>
+                      <option value="whatsapp">WhatsApp Direct Chat</option>
+                      <option value="phone">Voice Call</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Step 2: Service Selection & Adaptive Questions -->
+              <fieldset class="form-step">
+                <legend class="step-legend">02. Discipline &amp; Scope</legend>
+                <div class="form-group">
+                  <label for="service_id" class="form-label">Requested Service Discipline <span class="required">*</span></label>
+                  <select id="service_id" name="service_id" class="form-select" required>
+                    <option value="">— Select primary studio discipline —</option>
+                    <option value="1">01. Posters, Banners, Flyers &amp; Brochures</option>
+                    <option value="2">02. Brand Identity &amp; Logo Design</option>
+                    <option value="3">03. Business Cards &amp; Product Mockups</option>
+                    <option value="4">04. Software &amp; Web Development</option>
+                    <option value="5">05. Video Editing &amp; Motion Graphics</option>
+                    <option value="6">06. Content &amp; Social Media Design</option>
+                    <option value="7">07. Graphic Design Classes &amp; Training</option>
+                  </select>
+                  <span class="field-error" id="err-service_id"></span>
+                </div>
+
+                <!-- Adaptive Container: Web Development Specifics -->
+                <div id="adaptive-web" class="adaptive-panel" style="display: none;">
+                  <h4 class="adaptive-title">Web Development Requirements</h4>
+                  <div class="form-group">
+                    <label for="web_domain" class="form-label">Existing Domain / URL (if any)</label>
+                    <input type="text" id="web_domain" name="web_domain" class="form-input" placeholder="e.g. yourcompany.co.ke">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Key Platform Capabilities Needed</label>
+                    <div class="checkbox-grid">
+                      <label class="checkbox-label"><input type="checkbox" name="web_features" value="Booking Engine"> Client Booking / Consultation Engine</label>
+                      <label class="checkbox-label"><input type="checkbox" name="web_features" value="Content CMS"> Bespoke Admin CMS / Portal</label>
+                      <label class="checkbox-label"><input type="checkbox" name="web_features" value="E-Commerce"> Product Catalog / E-Commerce</label>
+                      <label class="checkbox-label"><input type="checkbox" name="web_features" value="SEO Optimization"> High-Ranking Technical SEO</label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Adaptive Container: Branding Specifics -->
+                <div id="adaptive-branding" class="adaptive-panel" style="display: none;">
+                  <h4 class="adaptive-title">Brand Identity Context</h4>
+                  <div class="form-group">
+                    <label for="brand_stage" class="form-label">Business Life Stage</label>
+                    <select id="brand_stage" name="brand_stage" class="form-select">
+                      <option value="New Venture">New Business Venture (Creation from scratch)</option>
+                      <option value="Rebrand">Established Business Seeking Strategic Rebrand</option>
+                      <option value="Brand Extension">Brand Extension / Sub-brand Rollout</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Adaptive Container: Print Specifics -->
+                <div id="adaptive-print" class="adaptive-panel" style="display: none;">
+                  <h4 class="adaptive-title">Print &amp; Finishing Specifications</h4>
+                  <div class="form-group">
+                    <label for="print_format" class="form-label">Intended Dimensions &amp; Format</label>
+                    <input type="text" id="print_format" name="print_format" class="form-input" placeholder="e.g. A1 Outdoor Poster, Tri-fold Brochure, 3x1m Teardrop Banner">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="project_title" class="form-label">Project Title or Campaign Name <span class="required">*</span></label>
+                  <input type="text" id="project_title" name="project_title" class="form-input" required placeholder="e.g. Specialty Tea Packaging Rollout 2026">
+                  <span class="field-error" id="err-project_title"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="project_description" class="form-label">Project Description &amp; Objectives <span class="required">*</span></label>
+                  <textarea id="project_description" name="project_description" class="form-textarea" rows="5" required placeholder="Describe what you want to achieve, your primary audience, and any specific deliverables..."></textarea>
+                  <span class="char-hint">Minimum 20 characters describing your scope.</span>
+                  <span class="field-error" id="err-project_description"></span>
+                </div>
+              </fieldset>
+
+              <!-- Step 3: Timeline & Budget -->
+              <fieldset class="form-step">
+                <legend class="step-legend">03. Budget &amp; Target Timeline</legend>
+                <div class="form-row grid-2">
+                  <div class="form-group">
+                    <label for="budget_range" class="form-label">Target Investment Budget (KES)</label>
+                    <select id="budget_range" name="budget_range" class="form-select">
+                      <option value="Undisclosed">Prefer to discuss during consultation</option>
+                      <option value="Under KES 10,000">Under KES 10,000</option>
+                      <option value="KES 10,000 - 30,000">KES 10,000 – 30,000</option>
+                      <option value="KES 30,000 - 75,000">KES 30,000 – 75,000</option>
+                      <option value="KES 75,000 - 150,000">KES 75,000 – 150,000</option>
+                      <option value="KES 150,000+">KES 150,000+</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="deadline_date" class="form-label">Desired Completion Deadline</label>
+                    <input type="date" id="deadline_date" name="deadline_date" class="form-input">
+                  </div>
+                </div>
+
+                <div class="form-group checkbox-row">
+                  <label class="checkbox-label">
+                    <input type="checkbox" id="privacy_consent" name="privacy_consent" required>
+                    I consent to Inklet Studios retaining my enquiry details for project evaluation in accordance with the <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+                  </label>
+                  <span class="field-error" id="err-privacy_consent"></span>
+                </div>
+              </fieldset>
+
+              <div class="form-submit-row">
+                <button type="submit" id="submit-brief-btn" class="btn btn-primary btn-lg">
+                  <span class="btn-text">Submit Project Brief</span>
+                  <span class="btn-spinner" aria-hidden="true" style="display: none;">&#8987; Submitting...</span>
+                </button>
+                <p class="submit-note">Submitting a brief creates a review request. It does not commit you to payment.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Sidebar Explainer -->
+        <aside class="booking-sidebar">
+          <div class="sidebar-box">
+            <h3 class="sidebar-title">What Happens Next?</h3>
+            <ol class="process-steps">
+              <li>
+                <strong>01. Secure Logging:</strong> Your brief is cataloged with a cryptographic reference (e.g. <code>INK-202610-XXXX</code>).
+              </li>
+              <li>
+                <strong>02. Studio Scrutiny:</strong> Our creative directors in Chuka evaluate your scope against studio capacity.
+              </li>
+              <li>
+                <strong>03. Consultation &amp; Scope:</strong> Within 24–48 hours, we provide an itemized proposal, timeline, and deliverables list.
+              </li>
+              <li>
+                <strong>04. Acceptance &amp; Kick-off:</strong> Work begins with deliberate focus under our “Ink with Intent” guarantee.
+              </li>
+            </ol>
+          </div>
+
+          <div class="sidebar-box direct-help">
+            <h4 class="direct-title">Prefer Direct Conversation?</h4>
+            <p class="direct-desc">You can reach our lead designer directly on WhatsApp with your questions.</p>
+            <a href="https://wa.me/254700000000?text=Hello%20Inklet%20Studios,%20I%20have%20an%20enquiry%20about%20a%20creative%20project." class="btn btn-outline btn-block" target="_blank" rel="noopener noreferrer">Message Studio WhatsApp</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Success Confirmation Modal -->
+    <dialog id="confirmation-dialog" class="confirm-dialog" aria-label="Booking Confirmation">
+      <div class="confirm-card">
+        <div class="confirm-icon">&#10003;</div>
+        <h2 class="confirm-title">Project Brief Received.</h2>
+        <p class="confirm-msg">
+          Thank you, <strong id="conf-client-name">Client</strong>. Your enquiry has been securely logged with unique reference:
+        </p>
+        <div class="confirm-ref-badge" id="conf-booking-ref">INK-202610-0000</div>
+        <p class="confirm-sub" id="conf-email-note">
+          A confirmation record has been cataloged. Our studio team in Chuka will review your project and respond within 24 to 48 business hours.
+        </p>
+        <div class="confirm-actions">
+          <a href="#" id="conf-whatsapp-btn" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            Continue on WhatsApp with Reference
+          </a>
+          <button type="button" id="conf-close-btn" class="btn btn-outline">Close Confirmation</button>
+        </div>
+      </div>
+    </dialog>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <div class="footer-logo">
+            <span class="brand-title">INKLET</span>
+            <span class="brand-sub">STUDIOS</span>
+          </div>
+          <p class="footer-philosophy">“Ink with Intent”</p>
+          <p class="footer-bio">
+            A creative design and digital services studio based in Chuka, Kenya. Dedicated to authentic visual craftsmanship, strategic branding, bespoke web engineering, and design education.
+          </p>
+          <p class="footer-location">
+            <strong>Location:</strong> Chuka, Tharaka Nithi County, Kenya
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#service-1">Posters &amp; Print</a></li>
+            <li><a href="services.html#service-2">Brand Identity &amp; Logos</a></li>
+            <li><a href="services.html#service-3">Stationery &amp; Mockups</a></li>
+            <li><a href="services.html#service-4">Software &amp; Web Development</a></li>
+            <li><a href="services.html#service-5">Motion Graphics &amp; Video</a></li>
+            <li><a href="services.html#service-6">Social Media Content</a></li>
+            <li><a href="classes.html">Design Classes &amp; Training</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-heading">Studio</h4>
+          <ul class="footer-links">
+            <li><a href="portfolio.html">Portfolio Archive</a></li>
+            <li><a href="about.html">About the Studio</a></li>
+            <li><a href="classes.html">Design Academy</a></li>
+            <li><a href="booking.html">Booking &amp; Commission</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Client &amp; Admin Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-heading">Direct Connect</h4>
+          <p class="footer-contact-item"><strong>Email:</strong> <a href="mailto:hello@inkletstudios.com">hello@inkletstudios.com</a></p>
+          <p class="footer-contact-item"><strong>WhatsApp:</strong> <a href="https://wa.me/254700000000" target="_blank" rel="noopener noreferrer">+254 700 000 000</a></p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Inklet Studios. All rights reserved. “Ink with Intent”</p>
+        <div class="footer-legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <span class="sep">&bull;</span>
+          <a href="terms.html">Terms of Service</a>
+          <span class="sep">&bull;</span>
+          <a href="#top">Back to Top &uarr;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" fill="none">
+  <!-- Inklet Studios Mark: Minimalist precision ink nib with gold core -->
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2C485"/>
+      <stop offset="50%" stop-color="#D4AF69"/>
+      <stop offset="100%" stop-color="#B88F47"/>
+    </linearGradient>
+    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1A2234"/>
+      <stop offset="100%" stop-color="#0E1420"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Disc -->
+  <circle cx="50" cy="50" r="46" fill="url(#navyGrad)" stroke="url(#goldGrad)" stroke-width="2"/>
+  <!-- Precision Nib Geometry -->
+  <path d="M50 18 L68 46 L60 78 L50 82 L40 78 L32 46 Z" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Central Slit & Breather Hole -->
+  <circle cx="50" cy="52" r="3.5" fill="url(#goldGrad)"/>
+  <line x1="50" y1="52" x2="50" y2="82" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Intent Accent Dot -->
+  <circle cx="50" cy="32" r="2" fill="#F8F5EF"/>
+</svg>

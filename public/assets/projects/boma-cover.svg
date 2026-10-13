@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="timberBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E1916"/>
+      <stop offset="100%" stop-color="#100C09"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#timberBg)"/>
+  <!-- Grain Line Geometry -->
+  <path d="M100 100 C 300 120, 500 80, 700 100" stroke="#4A3B32" stroke-width="2" fill="none"/>
+  <path d="M100 180 C 300 200, 500 160, 700 180" stroke="#4A3B32" stroke-width="2" fill="none"/>
+  <path d="M100 260 C 300 280, 500 240, 700 260" stroke="#4A3B32" stroke-width="2" fill="none"/>
+  <!-- Clean Editorial Browser Mockup Box -->
+  <rect x="140" y="160" width="520" height="320" rx="6" fill="#F8F5EF" stroke="#D4AF69" stroke-width="2"/>
+  <!-- Browser Header Bar -->
+  <rect x="140" y="160" width="520" height="36" rx="6" fill="#EDE7DD"/>
+  <circle cx="165" cy="178" r="5" fill="#C59F58"/>
+  <circle cx="182" cy="178" r="5" fill="#D4AF69"/>
+  <circle cx="199" cy="178" r="5" fill="#A89B8D"/>
+  <rect x="230" y="168" width="340" height="20" rx="4" fill="#FFFFFF"/>
+  <text x="240" y="182" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#718096">https://bomacrafts.co.ke/commissions</text>
+  <!-- Mockup Page Content -->
+  <text x="180" y="240" font-family="'Playfair Display', serif" font-size="24" font-weight="700" fill="#242424">BOMA TIMBER</text>
+  <text x="180" y="265" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#718096">Custom Architectural Woodwork &amp; Furniture</text>
+  <rect x="180" y="290" width="130" height="130" fill="#DDD5C7"/>
+  <rect x="330" y="290" width="130" height="130" fill="#C8BEAC"/>
+  <rect x="480" y="290" width="130" height="130" fill="#B3A794"/>
+  <text x="400" y="530" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" letter-spacing="4" fill="#D4AF69" text-anchor="middle">BESPOKE WEB PLATFORM &amp; COMMISSION ENGINE</text>
+</svg>

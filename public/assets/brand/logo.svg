@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" width="320" height="64" fill="none">
+  <defs>
+    <linearGradient id="goldGradL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2C485"/>
+      <stop offset="50%" stop-color="#D4AF69"/>
+      <stop offset="100%" stop-color="#B88F47"/>
+    </linearGradient>
+  </defs>
+  <!-- Iconic Mark on Left -->
+  <g transform="translate(4, 4)">
+    <circle cx="28" cy="28" r="26" fill="#111827" stroke="url(#goldGradL)" stroke-width="1.5"/>
+    <path d="M28 10 L38 27 L33 46 L28 48 L23 46 L18 27 Z" fill="none" stroke="url(#goldGradL)" stroke-width="1.8" stroke-linejoin="round"/>
+    <circle cx="28" cy="30" r="2" fill="url(#goldGradL)"/>
+    <line x1="28" y1="30" x2="28" y2="48" stroke="url(#goldGradL)" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+  <!-- Typographic Wordmark -->
+  <text x="68" y="34" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" fill="currentColor">
+    INKLET
+  </text>
+  <text x="178" y="34" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="300" letter-spacing="3" fill="url(#goldGradL)">
+    STUDIOS
+  </text>
+  <!-- Philosophy Sub-label -->
+  <text x="69" y="49" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif" font-size="8" font-weight="600" letter-spacing="2.5" fill="#8892B0">
+    INK WITH INTENT • CHUKA, KENYA
+  </text>
+</svg>

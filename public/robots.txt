@@ -1,0 +1,45 @@
+# =====================================================================
+# INKLET STUDIOS — ROBOTS CONFIGURATION (robots.txt)
+# Philosophy: "Ink with Intent" — Chuka, Kenya
+# =====================================================================
+
+User-agent: *
+
+# Disallow administrative portal and sensitive engines
+Disallow: /admindashboard.html
+Disallow: /adminprojects.html
+Disallow: /adminprojectform.html
+Disallow: /adminservices.html
+Disallow: /adminbookings.html
+Disallow: /adminbookingdetail.html
+Disallow: /adminmessages.html
+Disallow: /adminclasses.html
+Disallow: /admincontent.html
+Disallow: /adminsettings.html
+
+# Disallow authentication and recovery pages
+Disallow: /login.html
+Disallow: /register.html
+Disallow: /forgotpassword.html
+Disallow: /resetpassword.html
+
+# Disallow backend and API endpoints
+Disallow: /api/
+Disallow: /backend/
+
+# Allow all public-facing pages and assets
+Allow: /
+Allow: /index.html
+Allow: /services.html
+Allow: /portfolio.html
+Allow: /project.html
+Allow: /booking.html
+Allow: /about.html
+Allow: /contact.html
+Allow: /classes.html
+Allow: /privacy.html
+Allow: /terms.html
+Allow: /assets/
+
+# Canonical XML Sitemap
+Sitemap: https://inkletstudios.com/sitemap.xml

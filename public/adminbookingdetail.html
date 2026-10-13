@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brief Inspector — Inklet Studio Admin</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
+  <link rel="stylesheet" href="adminbookingdetail.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="adminbookingdetail.js" defer></script>
+</head>
+<body>
+  <div class="admin-layout">
+    <!-- Sidebar -->
+    <aside class="admin-sidebar" id="admin-sidebar">
+      <div class="sidebar-brand">
+        <a href="admindashboard.html" class="brand-link">
+          <span class="brand-symbol">
+            <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+              <circle cx="16" cy="16" r="14" fill="#111827" stroke="#D4AF69" stroke-width="1.5"/>
+              <path d="M16 6 L22 15 L19.5 25 L16 26.5 L12.5 25 L10 15 Z" fill="none" stroke="#D4AF69" stroke-width="1.2"/>
+              <circle cx="16" cy="17" r="1.2" fill="#D4AF69"/>
+              <line x1="16" y1="17" x2="16" y2="26.5" stroke="#D4AF69" stroke-width="1.2"/>
+            </svg>
+          </span>
+          <span class="brand-text">
+            <span class="brand-title">INKLET</span>
+            <span class="brand-sub">STUDIO ADMIN</span>
+          </span>
+        </a>
+        <button class="sidebar-close-btn" id="sidebar-close-btn" aria-label="Close sidebar menu">&times;</button>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Administrative Navigation">
+        <div class="nav-section-title">CORE OPERATIONS</div>
+        <a href="admindashboard.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#9776;</span>
+          <span class="nav-label">Dashboard Overview</span>
+        </a>
+        <a href="adminprojects.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#9638;</span>
+          <span class="nav-label">Portfolio Projects</span>
+        </a>
+        <a href="adminprojectform.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#43;</span>
+          <span class="nav-label">Add New Project</span>
+        </a>
+        <a href="adminservices.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#9881;</span>
+          <span class="nav-label">Services & Pricing</span>
+        </a>
+
+        <div class="nav-section-title">CLIENT PIPELINE</div>
+        <a href="adminbookings.html" class="nav-item active">
+          <span class="nav-icon" aria-hidden="true">&#9745;</span>
+          <span class="nav-label">Bookings & Briefs</span>
+        </a>
+        <a href="adminmessages.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#9993;</span>
+          <span class="nav-label">Contact Messages</span>
+        </a>
+        <a href="adminclasses.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#127891;</span>
+          <span class="nav-label">Design Classes</span>
+        </a>
+
+        <div class="nav-section-title">CONFIGURATION</div>
+        <a href="admincontent.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#9998;</span>
+          <span class="nav-label">Website Content</span>
+        </a>
+        <a href="adminsettings.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#9881;</span>
+          <span class="nav-label">Business Settings</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="booking.html" target="_blank" rel="noopener noreferrer" class="sidebar-link-external">
+          <span class="nav-icon" aria-hidden="true">&#127760;</span>
+          <span>View Public Booking &rarr;</span>
+        </a>
+        <button type="button" id="btn-logout" class="sidebar-btn-logout">
+          <span class="nav-icon" aria-hidden="true">&#8677;</span>
+          <span>Sign Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="admin-main-wrap">
+      <header class="admin-topbar">
+        <div class="topbar-left">
+          <button class="sidebar-toggle-btn" id="sidebar-toggle-btn" aria-label="Toggle navigation drawer">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <div class="topbar-breadcrumb">
+            <a href="adminbookings.html" class="crumb-root">Bookings Pipeline</a>
+            <span class="crumb-sep">/</span>
+            <span class="crumb-current" id="crumb-ref">Brief Inspection</span>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme" type="button">
+            <span class="theme-icon-sun" aria-hidden="true">&#9728;</span>
+            <span class="theme-icon-moon" aria-hidden="true">&#9790;</span>
+          </button>
+
+          <div class="user-profile">
+            <span class="user-avatar" aria-hidden="true">IS</span>
+            <div class="user-meta">
+              <span class="user-name">Inklet Administrator</span>
+              <span class="user-role">Superadmin &bull; Chuka</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="admin-content" id="main-content">
+        <!-- Top Status Bar -->
+        <div class="page-header">
+          <div>
+            <div class="ref-heading-wrap">
+              <span class="booking-ref-badge font-mono" id="detail-ref-badge">INK-2026-XXXX</span>
+              <span class="status-pill status-new" id="detail-status-pill">NEW</span>
+            </div>
+            <h1 class="page-title" id="detail-project-title">Project Brief Inspection</h1>
+            <p class="page-subtitle" id="detail-submitted-meta">Submitted via public web platform &bull; Loading timestamp...</p>
+          </div>
+          <div class="header-actions">
+            <a href="adminbookings.html" class="btn btn-outline btn-sm">&larr; Back to Pipeline</a>
+          </div>
+        </div>
+
+        <div id="detail-alert" class="alert-box" style="display: none;" role="alert"></div>
+
+        <div class="detail-grid">
+          <!-- Left Main Column: Brief Contents & Audit History -->
+          <div class="detail-col-main">
+            <!-- Brief Core Card -->
+            <div class="detail-card">
+              <h2 class="card-heading">Project Scope &amp; Specifications</h2>
+
+              <div class="spec-grid">
+                <div class="spec-item">
+                  <span class="spec-label">Service Discipline</span>
+                  <span class="spec-value" id="spec-service">&mdash;</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Target Deadline</span>
+                  <span class="spec-value" id="spec-deadline">&mdash;</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Budget Allocation</span>
+                  <span class="spec-value" id="spec-budget">&mdash;</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Preferred Channel</span>
+                  <span class="spec-value" id="spec-channel">&mdash;</span>
+                </div>
+              </div>
+
+              <div class="brief-body-section">
+                <h3 class="brief-subheading">Client Description &amp; Objectives</h3>
+                <div class="brief-text-content" id="spec-description">Loading brief narrative...</div>
+              </div>
+            </div>
+
+            <!-- Pipeline Status Control Card -->
+            <div class="detail-card">
+              <h2 class="card-heading">Pipeline Status Transition</h2>
+              <form id="status-update-form" class="status-form">
+                <div class="status-control-row">
+                  <div class="form-group flex-1">
+                    <label for="select-new-status" class="form-label">Update Pipeline Stage</label>
+                    <select id="select-new-status" class="form-select">
+                      <option value="NEW">NEW — Unreviewed brief</option>
+                      <option value="REVIEWING">REVIEWING — Assessing feasibility &amp; quotation</option>
+                      <option value="ACCEPTED">ACCEPTED — Confirmed commission, deposit paid</option>
+                      <option value="COMPLETED">COMPLETED — Assets finalized &amp; delivered</option>
+                      <option value="CANCELLED">CANCELLED — Declined or withdrawn</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group flex-2">
+                    <label for="status-note-input" class="form-label">Transition Reason / Notes</label>
+                    <input type="text" id="status-note-input" class="form-input" placeholder="e.g. Initial consultation conducted via phone, deposit received.">
+                  </div>
+
+                  <div class="form-group btn-align-end">
+                    <button type="submit" id="btn-update-status" class="btn btn-primary btn-sm">Update Status</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Status History Timeline -->
+            <div class="detail-card">
+              <h2 class="card-heading">Status Audit Log</h2>
+              <div class="timeline" id="timeline-container">
+                <p class="text-muted">Loading status history...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Sidebar Column: Client Contact & Studio Private Notes -->
+          <div class="detail-col-side">
+            <!-- Client Card -->
+            <div class="detail-card">
+              <h2 class="card-heading">Client Profile</h2>
+
+              <div class="client-info-block">
+                <div class="client-name" id="client-name-display">&mdash;</div>
+                <div class="client-meta-item">
+                  <span class="meta-icon">&#9993;</span>
+                  <a href="#" id="client-email-link" class="gold-link font-mono">&mdash;</a>
+                </div>
+                <div class="client-meta-item">
+                  <span class="meta-icon">&#128222;</span>
+                  <a href="#" id="client-phone-link" class="font-mono">&mdash;</a>
+                </div>
+              </div>
+
+              <div class="client-quick-actions">
+                <a href="#" id="btn-quick-whatsapp" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-block">
+                  <svg class="btn-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.13 6.94C8.93 6.94 8.6 7.02 8.32 7.32C8.04 7.63 7.26 8.36 7.26 9.83C7.26 11.3 8.34 12.72 8.49 12.92C8.64 13.12 10.56 16.08 13.51 17.35C14.21 17.65 14.76 17.84 15.19 17.97C15.9 18.2 16.54 18.17 17.05 18.09C17.62 18.01 18.81 17.37 19.06 16.67C19.31 15.97 19.31 15.37 19.23 15.24C19.16 15.12 18.96 15.05 18.66 14.9C18.36 14.75 16.89 14.03 16.61 13.93C16.34 13.83 16.14 13.78 15.94 14.08C15.74 14.38 15.17 15.05 15 15.25C14.83 15.45 14.66 15.47 14.36 15.32C14.06 15.17 12.8 14.75 11.29 13.41C10.12 12.36 9.33 11.07 9.1 10.68C8.88 10.29 9.08 10.07 9.23 9.92C9.36 9.79 9.53 9.57 9.68 9.39C9.83 9.22 9.88 9.09 9.98 8.89C10.08 8.69 10.03 8.52 9.96 8.37C9.88 8.22 9.28 6.75 9.13 6.94Z"/>
+                  </svg>
+                  <span>Reply via WhatsApp</span>
+                </a>
+                <a href="#" id="btn-quick-email" class="btn btn-outline btn-block">
+                  <svg class="btn-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                  </svg>
+                  <span>Reply via Email</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Studio Private Notes Card -->
+            <div class="detail-card">
+              <h2 class="card-heading">Internal Studio Notes</h2>
+              <p class="card-hint">Confidential notes visible only to Inklet studio administrators.</p>
+
+              <div class="notes-list" id="notes-list-container">
+                <p class="text-muted text-sm">No internal notes added yet.</p>
+              </div>
+
+              <form id="note-form" class="note-add-form">
+                <div class="form-group">
+                  <label for="new-note-content" class="form-label">Add New Note</label>
+                  <textarea id="new-note-content" class="form-textarea" rows="3" required placeholder="Record meeting takeaways, quotation details, or special requests..."></textarea>
+                </div>
+                <button type="submit" id="btn-save-note" class="btn btn-outline btn-block btn-sm">Add Studio Note</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="admin-footer">
+        <p>&copy; 2026 Inklet Studios. Administrative Portal &bull; Chuka, Kenya &bull; “Ink with Intent”</p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="filmBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#09121D"/>
+      <stop offset="100%" stop-color="#04070B"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#filmBg)"/>
+  <!-- Topographic Flow Curves -->
+  <path d="M0 300 C 200 200, 400 400, 800 250" fill="none" stroke="#4263A5" stroke-width="2" opacity="0.6"/>
+  <path d="M0 330 C 220 230, 420 430, 800 280" fill="none" stroke="#D4AF69" stroke-width="1.5" opacity="0.4"/>
+  <path d="M0 360 C 240 260, 440 460, 800 310" fill="none" stroke="#4263A5" stroke-width="1" opacity="0.3"/>
+  <!-- 16:9 Letterbox Bars -->
+  <rect x="0" y="0" width="800" height="60" fill="#000000"/>
+  <rect x="0" y="540" width="800" height="60" fill="#000000"/>
+  <!-- Film Metadata & Timecode -->
+  <text x="60" y="40" font-family="'Courier New', monospace" font-size="12" fill="#D4AF69" letter-spacing="2">REC [00:14:28:12] • 4K DCI • 24.00 FPS</text>
+  <text x="740" y="40" font-family="'Courier New', monospace" font-size="12" fill="#8892B0" text-anchor="end">KATHITA BASIN EXPEDITION</text>
+  <!-- Motion Title Typography -->
+  <text x="400" y="270" font-family="'Playfair Display', serif" font-size="46" font-style="italic" font-weight="700" fill="#F8F5EF" text-anchor="middle">Echoes of the River</text>
+  <text x="400" y="320" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="600" letter-spacing="8" fill="#D4AF69" text-anchor="middle">DOCUMENTARY TITLE SYSTEM &amp; CARTOGRAPHY</text>
+</svg>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Account Registration — Inklet Studios</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
+  <link rel="stylesheet" href="register.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="register.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-link" aria-label="Inklet Studios Home">
+        <span class="brand-symbol">
+          <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+            <circle cx="16" cy="16" r="14" fill="#111827" stroke="#D4AF69" stroke-width="1.5"/>
+            <path d="M16 6 L22 15 L19.5 25 L16 26.5 L12.5 25 L10 15 Z" fill="none" stroke="#D4AF69" stroke-width="1.2"/>
+            <circle cx="16" cy="17" r="1.2" fill="#D4AF69"/>
+            <line x1="16" y1="17" x2="16" y2="26.5" stroke="#D4AF69" stroke-width="1.2"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">INKLET</span>
+          <span class="brand-sub">STUDIOS</span>
+        </span>
+      </a>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme" type="button">
+          <span class="theme-icon-sun" aria-hidden="true">&#9728;</span>
+          <span class="theme-icon-moon" aria-hidden="true">&#9790;</span>
+        </button>
+        <a href="login.html" class="btn btn-outline btn-sm">Sign In</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="auth-main">
+    <div class="auth-card">
+      <span class="section-eyebrow">CLIENT REGISTRATION</span>
+      <h1 class="auth-title">Create Client Profile</h1>
+      <p class="auth-desc">Create a client profile for streamlined project brief submissions and asset downloads.</p>
+
+      <div id="reg-alert" class="reg-alert" role="alert" style="display: none;"></div>
+
+      <form id="register-form" novalidate>
+        <div class="form-group">
+          <label for="reg_name" class="form-label">Full Name <span class="required">*</span></label>
+          <input type="text" id="reg_name" name="name" class="form-input" required placeholder="e.g. Christine Mutua">
+          <span class="field-error" id="err-reg_name"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="reg_email" class="form-label">Email Address <span class="required">*</span></label>
+          <input type="email" id="reg_email" name="email" class="form-input" required placeholder="name@domain.com">
+          <span class="field-error" id="err-reg_email"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="reg_phone" class="form-label">Phone Number / WhatsApp</label>
+          <input type="tel" id="reg_phone" name="phone" class="form-input" placeholder="+254 7XX XXX XXX">
+        </div>
+
+        <div class="form-group">
+          <label for="reg_password" class="form-label">Password <span class="required">*</span></label>
+          <input type="password" id="reg_password" name="password" class="form-input" required placeholder="At least 8 characters">
+          <span class="field-error" id="err-reg_password"></span>
+        </div>
+
+        <button type="submit" id="reg-submit-btn" class="btn btn-primary btn-block btn-lg">
+          <span class="btn-text">Register Profile</span>
+          <span class="btn-spinner" aria-hidden="true" style="display: none;">Creating...</span>
+        </button>
+      </form>
+
+      <div class="auth-card-footer">
+        <p class="footer-note">
+          Already registered? <a href="login.html" class="gold-link">Sign In here</a>.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p class="footer-copy">&copy; 2026 Inklet Studios. All rights reserved. “Ink with Intent”</p>
+    </div>
+  </footer>
+</body>
+</html>

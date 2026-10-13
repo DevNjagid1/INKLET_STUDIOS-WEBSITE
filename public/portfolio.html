@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Archive — Inklet Studios | Selected Design &amp; Digital Work</title>
+  <meta name="description" content="Browse selected client case studies, posters, brand systems, web engineering, and motion graphics produced by Inklet Studios in Chuka, Kenya.">
+  <link rel="canonical" href="https://inkletstudios.com/portfolio.html">
+
+  <meta property="og:title" content="Portfolio Archive — Inklet Studios">
+  <meta property="og:description" content="Deliberate creative craftsmanship across branding, print, web platforms, and kinetic video.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://inkletstudios.com/portfolio.html">
+  <meta property="og:image" content="https://inkletstudios.com/assets/brand/logo.svg">
+
+  <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
+  <link rel="stylesheet" href="portfolio.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="portfolio.js" defer></script>
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header" id="top">
+    <div class="header-container">
+      <a href="index.html" class="brand-link" aria-label="Inklet Studios Home">
+        <span class="brand-symbol">
+          <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+            <circle cx="16" cy="16" r="14" fill="#111827" stroke="#D4AF69" stroke-width="1.5"/>
+            <path d="M16 6 L22 15 L19.5 25 L16 26.5 L12.5 25 L10 15 Z" fill="none" stroke="#D4AF69" stroke-width="1.2"/>
+            <circle cx="16" cy="17" r="1.2" fill="#D4AF69"/>
+            <line x1="16" y1="17" x2="16" y2="26.5" stroke="#D4AF69" stroke-width="1.2"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">INKLET</span>
+          <span class="brand-sub">STUDIOS</span>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="portfolio.html" class="nav-link active" aria-current="page">Portfolio</a>
+        <a href="classes.html" class="nav-link">Classes</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme" type="button">
+          <span class="theme-icon-sun" aria-hidden="true">&#9728;</span>
+          <span class="theme-icon-moon" aria-hidden="true">&#9790;</span>
+        </button>
+        <a href="booking.html" class="btn btn-outline btn-sm cta-header">Start a Brief</a>
+        <button id="mobile-menu-btn" class="mobile-toggle-btn" aria-label="Open Navigation Menu" aria-expanded="false" type="button">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="mobile-nav-drawer" aria-hidden="true">
+      <nav class="mobile-nav" aria-label="Mobile Navigation">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="portfolio.html" class="mobile-nav-link active">Portfolio</a>
+        <a href="classes.html" class="mobile-nav-link">Design Classes</a>
+        <a href="about.html" class="mobile-nav-link">About Studio</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+        <a href="booking.html" class="btn btn-primary btn-block mobile-cta">Commission a Project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero / Archive Intro -->
+    <section class="portfolio-hero">
+      <div class="hero-container">
+        <span class="section-eyebrow">SELECTED WORKS</span>
+        <h1 class="portfolio-hero-title">Intent in Practice.</h1>
+        <p class="portfolio-hero-desc">
+          An archive of creative commissions, strategic brand identities, editorial posters, custom web systems, and motion pieces designed with uncompromising craftsmanship.
+        </p>
+      </div>
+    </section>
+
+    <!-- Filters & Gallery Controls -->
+    <section class="gallery-controls-section">
+      <div class="section-container controls-container">
+        <!-- Category Filter Pills -->
+        <div class="category-filters" id="category-filters" role="tablist" aria-label="Filter projects by discipline">
+          <button class="filter-pill active" data-category="all" role="tab" aria-selected="true">All Works</button>
+          <button class="filter-pill" data-category="brand-identity" role="tab" aria-selected="false">Brand Identity</button>
+          <button class="filter-pill" data-category="posters-print" role="tab" aria-selected="false">Posters &amp; Print</button>
+          <button class="filter-pill" data-category="packaging-mockups" role="tab" aria-selected="false">Stationery &amp; Mockups</button>
+          <button class="filter-pill" data-category="software-web" role="tab" aria-selected="false">Software &amp; Web</button>
+          <button class="filter-pill" data-category="motion-video" role="tab" aria-selected="false">Motion &amp; Video</button>
+        </div>
+
+        <!-- Search Input -->
+        <div class="search-box">
+          <input type="search" id="project-search" class="search-input" placeholder="Search projects by keyword, client, or tool..." aria-label="Search projects">
+          <span class="search-icon" aria-hidden="true">&#128269;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Gallery Grid -->
+    <section class="gallery-section">
+      <div class="section-container">
+        <!-- Live Loading Status Indicator -->
+        <div id="gallery-status" class="gallery-status" role="status" aria-live="polite"></div>
+
+        <div id="portfolio-grid" class="portfolio-grid">
+          <!-- Fallback Cards (Replaced dynamically via portfolio.js) -->
+          <article class="project-card" data-category="brand-identity">
+            <a href="project.html?slug=kipawa-coffee-roasters-identity" class="project-media-link" aria-label="View Kipawa Coffee Roasters project">
+              <img src="assets/projects/kipawa-cover.svg" alt="Kipawa Coffee Roasters Identity" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <span class="overlay-tag">Brand Identity</span>
+                <span class="overlay-action">Inspect Brief &rarr;</span>
+              </div>
+            </a>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-cat">Brand Identity &amp; Logos</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title">
+                <a href="project.html?slug=kipawa-coffee-roasters-identity">Kipawa Coffee Roasters — Visual Identity</a>
+              </h3>
+              <p class="project-excerpt">A grounded, heritage-rich identity for a specialty highlands coffee brand rooted in Mount Kenya foothills.</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="posters-print">
+            <a href="project.html?slug=mt-kenya-creative-summit-poster" class="project-media-link" aria-label="View Mount Kenya Creative Summit project">
+              <img src="assets/projects/summit-cover.svg" alt="Mount Kenya Creative Summit poster" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <span class="overlay-tag">Posters &amp; Print</span>
+                <span class="overlay-action">Inspect Brief &rarr;</span>
+              </div>
+            </a>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-cat">Posters &amp; Editorial Print</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title">
+                <a href="project.html?slug=mt-kenya-creative-summit-poster">Mount Kenya Creative Summit — Poster Series</a>
+              </h3>
+              <p class="project-excerpt">A striking visual campaign and editorial poster series celebrating creative entrepreneurship in Eastern Kenya.</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="software-web">
+            <a href="project.html?slug=boma-timber-crafts-web" class="project-media-link" aria-label="View Boma Timber Crafts project">
+              <img src="assets/projects/boma-cover.svg" alt="Boma Timber Crafts website interface" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <span class="overlay-tag">Web Development</span>
+                <span class="overlay-action">Inspect Brief &rarr;</span>
+              </div>
+            </a>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-cat">Software &amp; Web Development</span>
+                <span class="project-year">2025</span>
+              </div>
+              <h3 class="project-title">
+                <a href="project.html?slug=boma-timber-crafts-web">Boma Timber Crafts — Web Platform</a>
+              </h3>
+              <p class="project-excerpt">A lightweight, bespoke digital catalog and custom commission booking platform for artisanal woodworkers.</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="motion-video">
+            <a href="project.html?slug=echoes-of-the-river-motion" class="project-media-link" aria-label="View Echoes of the River project">
+              <img src="assets/projects/echoes-cover.svg" alt="Echoes of the River title sequence" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <span class="overlay-tag">Motion &amp; Video</span>
+                <span class="overlay-action">Inspect Brief &rarr;</span>
+              </div>
+            </a>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-cat">Motion &amp; Video Editing</span>
+                <span class="project-year">2025</span>
+              </div>
+              <h3 class="project-title">
+                <a href="project.html?slug=echoes-of-the-river-motion">Echoes of the River — Film Titles &amp; Motion</a>
+              </h3>
+              <p class="project-excerpt">Kinetic typography and evocative visual title sequences for an Eastern Kenya environmental documentary.</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="packaging-mockups">
+            <a href="project.html?slug=zenith-legal-stationery" class="project-media-link" aria-label="View Zenith Legal Advocates project">
+              <img src="assets/projects/zenith-cover.svg" alt="Zenith Legal Advocates stationery and cards" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <span class="overlay-tag">Packaging &amp; Mockups</span>
+                <span class="overlay-action">Inspect Brief &rarr;</span>
+              </div>
+            </a>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-cat">Packaging &amp; Mockups</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title">
+                <a href="project.html?slug=zenith-legal-stationery">Zenith Legal Advocates — Stationery &amp; Mockups</a>
+              </h3>
+              <p class="project-excerpt">Refined tactile stationery, foil-embossed business cards, and digital pitch deck assets for commercial legal practice.</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Empty State Container -->
+        <div id="gallery-empty" class="gallery-empty" style="display: none;">
+          <p class="empty-title">No matching projects found</p>
+          <p class="empty-desc">Try selecting a different discipline filter or clearing your search keywords.</p>
+          <button type="button" class="btn btn-outline btn-sm" id="reset-filters-btn">Reset All Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Action -->
+    <section class="portfolio-cta-section">
+      <div class="section-container">
+        <div class="cta-banner">
+          <span class="section-eyebrow">COMMISSION A CASE STUDY</span>
+          <h2 class="cta-title">Have a project requiring this level of fidelity?</h2>
+          <p class="cta-text">
+            Let us craft your brand identity, event posters, or digital web platform with authentic intention.
+          </p>
+          <div class="cta-buttons">
+            <a href="booking.html" class="btn btn-primary btn-lg">Start Project Brief</a>
+            <a href="contact.html" class="btn btn-outline btn-lg">Contact Studio Team</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <div class="footer-logo">
+            <span class="brand-title">INKLET</span>
+            <span class="brand-sub">STUDIOS</span>
+          </div>
+          <p class="footer-philosophy">“Ink with Intent”</p>
+          <p class="footer-bio">
+            A creative design and digital services studio based in Chuka, Kenya. Dedicated to authentic visual craftsmanship, strategic branding, bespoke web engineering, and design education.
+          </p>
+          <p class="footer-location">
+            <strong>Location:</strong> Chuka, Tharaka Nithi County, Kenya
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#service-1">Posters &amp; Print</a></li>
+            <li><a href="services.html#service-2">Brand Identity &amp; Logos</a></li>
+            <li><a href="services.html#service-3">Stationery &amp; Mockups</a></li>
+            <li><a href="services.html#service-4">Software &amp; Web Development</a></li>
+            <li><a href="services.html#service-5">Motion Graphics &amp; Video</a></li>
+            <li><a href="services.html#service-6">Social Media Content</a></li>
+            <li><a href="classes.html">Design Classes &amp; Training</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-heading">Studio</h4>
+          <ul class="footer-links">
+            <li><a href="portfolio.html">Portfolio Archive</a></li>
+            <li><a href="about.html">About the Studio</a></li>
+            <li><a href="classes.html">Design Academy</a></li>
+            <li><a href="booking.html">Booking &amp; Commission</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Client &amp; Admin Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-heading">Direct Connect</h4>
+          <p class="footer-contact-item"><strong>Email:</strong> <a href="mailto:hello@inkletstudios.com">hello@inkletstudios.com</a></p>
+          <p class="footer-contact-item"><strong>WhatsApp:</strong> <a href="https://wa.me/254700000000" target="_blank" rel="noopener noreferrer">+254 700 000 000</a></p>
+          <div class="footer-socials">
+            <a href="https://instagram.com/inkletstudios" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://behance.net/inkletstudios" target="_blank" rel="noopener noreferrer">Behance</a>
+            <a href="https://linkedin.com/company/inkletstudios" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Inklet Studios. All rights reserved. “Ink with Intent”</p>
+        <div class="footer-legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <span class="sep">&bull;</span>
+          <a href="terms.html">Terms of Service</a>
+          <span class="sep">&bull;</span>
+          <a href="#top">Back to Top &uarr;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

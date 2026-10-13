@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — Inklet Studios</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
+  <link rel="stylesheet" href="admindashboard.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="admindashboard.js" defer></script>
+</head>
+<body>
+  <div class="admin-layout">
+    <!-- Admin Sidebar Navigation -->
+    <aside class="admin-sidebar" id="admin-sidebar">
+      <div class="sidebar-brand">
+        <a href="admindashboard.html" class="brand-link">
+          <span class="brand-symbol">
+            <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+              <circle cx="16" cy="16" r="14" fill="#111827" stroke="#D4AF69" stroke-width="1.5"/>
+              <path d="M16 6 L22 15 L19.5 25 L16 26.5 L12.5 25 L10 15 Z" fill="none" stroke="#D4AF69" stroke-width="1.2"/>
+              <circle cx="16" cy="17" r="1.2" fill="#D4AF69"/>
+              <line x1="16" y1="17" x2="16" y2="26.5" stroke="#D4AF69" stroke-width="1.2"/>
+            </svg>
+          </span>
+          <span class="brand-text">
+            <span class="brand-title">INKLET</span>
+            <span class="brand-sub">STUDIO ADMIN</span>
+          </span>
+        </a>
+        <button class="sidebar-close-btn" id="sidebar-close-btn" aria-label="Close sidebar menu">&times;</button>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Administrative Navigation">
+        <div class="nav-section-title">CORE OPERATIONS</div>
+        <a href="admindashboard.html" class="nav-item active">
+          <span class="nav-icon" aria-hidden="true">&#9776;</span>
+          <span class="nav-label">Dashboard Overview</span>
+        </a>
+        <a href="adminprojects.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#9638;</span>
+          <span class="nav-label">Portfolio Projects</span>
+        </a>
+        <a href="adminprojectform.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#43;</span>
+          <span class="nav-label">Add New Project</span>
+        </a>
+        <a href="adminservices.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#9881;</span>
+          <span class="nav-label">Services & Pricing</span>
+        </a>
+
+        <div class="nav-section-title">CLIENT PIPELINE</div>
+        <a href="adminbookings.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#9745;</span>
+          <span class="nav-label">Bookings & Briefs</span>
+          <span class="nav-badge" id="badge-bookings-new" style="display: none;">0</span>
+        </a>
+        <a href="adminmessages.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#9993;</span>
+          <span class="nav-label">Contact Messages</span>
+          <span class="nav-badge" id="badge-messages-unread" style="display: none;">0</span>
+        </a>
+        <a href="adminclasses.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#127891;</span>
+          <span class="nav-label">Design Classes</span>
+        </a>
+
+        <div class="nav-section-title">CONFIGURATION</div>
+        <a href="admincontent.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#9998;</span>
+          <span class="nav-label">Website Content</span>
+        </a>
+        <a href="adminsettings.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#9881;</span>
+          <span class="nav-label">Business Settings</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="index.html" target="_blank" rel="noopener noreferrer" class="sidebar-link-external">
+          <span class="nav-icon" aria-hidden="true">&#127760;</span>
+          <span>View Public Site &rarr;</span>
+        </a>
+        <button type="button" id="btn-logout" class="sidebar-btn-logout">
+          <span class="nav-icon" aria-hidden="true">&#8677;</span>
+          <span>Sign Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="admin-main-wrap">
+      <header class="admin-topbar">
+        <div class="topbar-left">
+          <button class="sidebar-toggle-btn" id="sidebar-toggle-btn" aria-label="Toggle navigation drawer">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <div class="topbar-breadcrumb">
+            <span class="crumb-root">Inklet Admin</span>
+            <span class="crumb-sep">/</span>
+            <span class="crumb-current">Dashboard</span>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme" type="button">
+            <span class="theme-icon-sun" aria-hidden="true">&#9728;</span>
+            <span class="theme-icon-moon" aria-hidden="true">&#9790;</span>
+          </button>
+
+          <div class="user-profile">
+            <span class="user-avatar" aria-hidden="true">IS</span>
+            <div class="user-meta">
+              <span class="user-name" id="admin-user-name">Inklet Administrator</span>
+              <span class="user-role" id="admin-user-role">Superadmin &bull; Chuka</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="admin-content" id="main-content">
+        <!-- Page Header -->
+        <div class="page-header">
+          <div>
+            <span class="eyebrow">TELEMETRY & PIPELINE</span>
+            <h1 class="page-title">Executive Dashboard</h1>
+            <p class="page-subtitle">Real-time business status for Inklet Studios — Chuka, Tharaka Nithi.</p>
+          </div>
+          <div class="header-actions">
+            <a href="adminprojectform.html" class="btn btn-primary btn-sm">&#43; New Project</a>
+            <a href="adminbookings.html" class="btn btn-outline btn-sm">&#128197; View All Briefs</a>
+          </div>
+        </div>
+
+        <!-- Telemetry Metrics Grid -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-header">
+              <span class="metric-label">TOTAL PROJECTS</span>
+              <span class="metric-icon" aria-hidden="true">&#9638;</span>
+            </div>
+            <div class="metric-value" id="stat-proj-total">&mdash;</div>
+            <div class="metric-meta">
+              <span class="meta-item"><strong id="stat-proj-pub">0</strong> published</span>
+              <span class="meta-sep">&bull;</span>
+              <span class="meta-item"><strong id="stat-proj-draft">0</strong> drafts</span>
+            </div>
+          </div>
+
+          <div class="metric-card metric-card-highlight">
+            <div class="metric-header">
+              <span class="metric-label">CLIENT BOOKINGS</span>
+              <span class="metric-icon" aria-hidden="true">&#9745;</span>
+            </div>
+            <div class="metric-value" id="stat-book-total">&mdash;</div>
+            <div class="metric-meta">
+              <span class="meta-item text-gold"><strong id="stat-book-new">0</strong> pending review</span>
+              <span class="meta-sep">&bull;</span>
+              <span class="meta-item"><strong id="stat-book-accepted">0</strong> accepted</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-header">
+              <span class="metric-label">CONTACT INBOX</span>
+              <span class="metric-icon" aria-hidden="true">&#9993;</span>
+            </div>
+            <div class="metric-value" id="stat-msg-total">&mdash;</div>
+            <div class="metric-meta">
+              <span class="meta-item text-gold"><strong id="stat-msg-unread">0</strong> unread messages</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-header">
+              <span class="metric-label">TRAINING STUDENTS</span>
+              <span class="metric-icon" aria-hidden="true">&#127891;</span>
+            </div>
+            <div class="metric-value" id="stat-class-confirmed">&mdash;</div>
+            <div class="metric-meta">
+              <span class="meta-item"><strong id="stat-class-pending">0</strong> pending enrollment</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Triage Queues Grid -->
+        <div class="dashboard-grid">
+          <!-- Recent Project Briefs -->
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div>
+                <h2 class="dash-card-title">Recent Project Briefs</h2>
+                <p class="dash-card-subtitle">Inbound inquiries requiring assessment or quotation.</p>
+              </div>
+              <a href="adminbookings.html" class="dash-card-link">View All &rarr;</a>
+            </div>
+
+            <div class="table-responsive">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Ref</th>
+                    <th>Client</th>
+                    <th>Service</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="table-bookings-tbody">
+                  <tr>
+                    <td colspan="6" class="text-center py-4">Loading project briefs...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Recent Inquiries -->
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div>
+                <h2 class="dash-card-title">Recent Inquiries</h2>
+                <p class="dash-card-subtitle">General messages from the public contact portal.</p>
+              </div>
+              <a href="adminmessages.html" class="dash-card-link">Inbox &rarr;</a>
+            </div>
+
+            <div class="table-responsive">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Sender</th>
+                    <th>Subject</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="table-messages-tbody">
+                  <tr>
+                    <td colspan="5" class="text-center py-4">Loading messages...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Launch Cards -->
+        <div class="quick-actions-section">
+          <h2 class="section-heading">Operational Shortcuts</h2>
+          <div class="quick-actions-grid">
+            <a href="adminprojectform.html" class="quick-action-card">
+              <div class="qa-icon">&#9638;</div>
+              <div class="qa-text">
+                <h3>Publish Case Study</h3>
+                <p>Upload photography, deliverables, and editorial brief notes.</p>
+              </div>
+            </a>
+
+            <a href="adminservices.html" class="quick-action-card">
+              <div class="qa-icon">&#9881;</div>
+              <div class="qa-text">
+                <h3>Update Service Catalog</h3>
+                <p>Refine deliverables, turnaround times, and starting rates (KES).</p>
+              </div>
+            </a>
+
+            <a href="adminclasses.html" class="quick-action-card">
+              <div class="qa-icon">&#127891;</div>
+              <div class="qa-text">
+                <h3>Cohort & Class Seats</h3>
+                <p>Toggle active enrollment for Chuka graphic design classes.</p>
+              </div>
+            </a>
+
+            <a href="adminsettings.html" class="quick-action-card">
+              <div class="qa-icon">&#128222;</div>
+              <div class="qa-text">
+                <h3>Studio Contact & WhatsApp</h3>
+                <p>Update phone lines, official studio email, or social accounts.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </main>
+
+      <footer class="admin-footer">
+        <p>&copy; 2026 Inklet Studios. Administrative Portal &bull; Chuka, Kenya &bull; “Ink with Intent”</p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

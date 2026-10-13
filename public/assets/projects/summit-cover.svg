@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="summitBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="60%" stop-color="#1A2234"/>
+      <stop offset="100%" stop-color="#0B101D"/>
+    </linearGradient>
+    <linearGradient id="goldS" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E2C485"/>
+      <stop offset="100%" stop-color="#D4AF69"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#summitBg)"/>
+  <!-- Typographic Grid Lines -->
+  <line x1="100" y1="0" x2="100" y2="600" stroke="#2A354D" stroke-width="1"/>
+  <line x1="700" y1="0" x2="700" y2="600" stroke="#2A354D" stroke-width="1"/>
+  <line x1="0" y1="120" x2="800" y2="120" stroke="#2A354D" stroke-width="1"/>
+  <line x1="0" y1="480" x2="800" y2="480" stroke="#2A354D" stroke-width="1"/>
+  <!-- Geometric Sharp Mountain Peak -->
+  <polygon points="400,100 580,420 220,420" fill="none" stroke="url(#goldS)" stroke-width="3"/>
+  <polygon points="400,140 540,400 260,400" fill="#4263A5" fill-opacity="0.1" stroke="#4263A5" stroke-width="1.5"/>
+  <circle cx="400" cy="100" r="8" fill="url(#goldS)"/>
+  <text x="120" y="80" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" letter-spacing="4" fill="#D4AF69">EASTERN KENYA REGIONAL ARTS FORUM</text>
+  <text x="120" y="465" font-family="'Playfair Display', Georgia, serif" font-size="44" font-weight="900" letter-spacing="1" fill="#F8F5EF">MT. KENYA</text>
+  <text x="120" y="515" font-family="'Plus Jakarta Sans', sans-serif" font-size="32" font-weight="300" letter-spacing="6" fill="url(#goldS)">CREATIVE SUMMIT 2026</text>
+  <text x="120" y="550" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" letter-spacing="3" fill="#8892B0">CHUKA CONVENTION CENTER • DESIGN, FILM &amp; CODE</text>
+</svg>

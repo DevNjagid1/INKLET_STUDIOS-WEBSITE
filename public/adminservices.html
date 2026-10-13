@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services & Pricing — Inklet Studio Admin</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
+  <link rel="stylesheet" href="adminservices.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="adminservices.js" defer></script>
+</head>
+<body>
+  <div class="admin-layout">
+    <!-- Sidebar -->
+    <aside class="admin-sidebar" id="admin-sidebar">
+      <div class="sidebar-brand">
+        <a href="admindashboard.html" class="brand-link">
+          <span class="brand-symbol">
+            <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+              <circle cx="16" cy="16" r="14" fill="#111827" stroke="#D4AF69" stroke-width="1.5"/>
+              <path d="M16 6 L22 15 L19.5 25 L16 26.5 L12.5 25 L10 15 Z" fill="none" stroke="#D4AF69" stroke-width="1.2"/>
+              <circle cx="16" cy="17" r="1.2" fill="#D4AF69"/>
+              <line x1="16" y1="17" x2="16" y2="26.5" stroke="#D4AF69" stroke-width="1.2"/>
+            </svg>
+          </span>
+          <span class="brand-text">
+            <span class="brand-title">INKLET</span>
+            <span class="brand-sub">STUDIO ADMIN</span>
+          </span>
+        </a>
+        <button class="sidebar-close-btn" id="sidebar-close-btn" aria-label="Close sidebar menu">&times;</button>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Administrative Navigation">
+        <div class="nav-section-title">CORE OPERATIONS</div>
+        <a href="admindashboard.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#9776;</span>
+          <span class="nav-label">Dashboard Overview</span>
+        </a>
+        <a href="adminprojects.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#9638;</span>
+          <span class="nav-label">Portfolio Projects</span>
+        </a>
+        <a href="adminprojectform.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#43;</span>
+          <span class="nav-label">Add New Project</span>
+        </a>
+        <a href="adminservices.html" class="nav-item active">
+          <span class="nav-icon" aria-hidden="true">&#9881;</span>
+          <span class="nav-label">Services & Pricing</span>
+        </a>
+
+        <div class="nav-section-title">CLIENT PIPELINE</div>
+        <a href="adminbookings.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#9745;</span>
+          <span class="nav-label">Bookings & Briefs</span>
+        </a>
+        <a href="adminmessages.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#9993;</span>
+          <span class="nav-label">Contact Messages</span>
+        </a>
+        <a href="adminclasses.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#127891;</span>
+          <span class="nav-label">Design Classes</span>
+        </a>
+
+        <div class="nav-section-title">CONFIGURATION</div>
+        <a href="admincontent.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#9998;</span>
+          <span class="nav-label">Website Content</span>
+        </a>
+        <a href="adminsettings.html" class="nav-item">
+          <span class="nav-icon" aria-hidden="true">&#9881;</span>
+          <span class="nav-label">Business Settings</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="services.html" target="_blank" rel="noopener noreferrer" class="sidebar-link-external">
+          <span class="nav-icon" aria-hidden="true">&#127760;</span>
+          <span>View Public Services &rarr;</span>
+        </a>
+        <button type="button" id="btn-logout" class="sidebar-btn-logout">
+          <span class="nav-icon" aria-hidden="true">&#8677;</span>
+          <span>Sign Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="admin-main-wrap">
+      <header class="admin-topbar">
+        <div class="topbar-left">
+          <button class="sidebar-toggle-btn" id="sidebar-toggle-btn" aria-label="Toggle navigation drawer">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <div class="topbar-breadcrumb">
+            <a href="admindashboard.html" class="crumb-root">Inklet Admin</a>
+            <span class="crumb-sep">/</span>
+            <span class="crumb-current">Services &amp; Pricing</span>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme" type="button">
+            <span class="theme-icon-sun" aria-hidden="true">&#9728;</span>
+            <span class="theme-icon-moon" aria-hidden="true">&#9790;</span>
+          </button>
+
+          <div class="user-profile">
+            <span class="user-avatar" aria-hidden="true">IS</span>
+            <div class="user-meta">
+              <span class="user-name">Inklet Administrator</span>
+              <span class="user-role">Superadmin &bull; Chuka</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="admin-content" id="main-content">
+        <div class="page-header">
+          <div>
+            <span class="eyebrow">COMMERCIAL OFFERINGS</span>
+            <h1 class="page-title">Service Catalog &amp; Pricing</h1>
+            <p class="page-subtitle">Configure deliverables, baseline rates (KES), and turnaround commitments for the 7 creative disciplines.</p>
+          </div>
+        </div>
+
+        <div id="service-alert" class="alert-box" style="display: none;" role="alert"></div>
+
+        <!-- Services List Card -->
+        <div class="dash-card">
+          <div class="table-responsive">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th style="width: 40px;">#</th>
+                  <th>Service Discipline</th>
+                  <th>Starting Rate</th>
+                  <th>Timeline</th>
+                  <th>Availability</th>
+                  <th style="text-align: right;">Action</th>
+                </tr>
+              </thead>
+              <tbody id="services-tbody">
+                <tr>
+                  <td colspan="6" class="text-center py-4">Loading creative disciplines...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+
+      <footer class="admin-footer">
+        <p>&copy; 2026 Inklet Studios. Administrative Portal &bull; Chuka, Kenya &bull; “Ink with Intent”</p>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Service Editor Modal -->
+  <div class="modal-backdrop" id="service-modal" style="display: none;">
+    <div class="modal-dialog modal-dialog-lg">
+      <div class="modal-header">
+        <h3 class="modal-title" id="service-modal-title">Edit Service Details</h3>
+        <button type="button" class="modal-close-btn" id="modal-close-btn">&times;</button>
+      </div>
+      <form id="service-edit-form">
+        <input type="hidden" id="edit_service_id">
+
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="edit_service_name" class="form-label">Discipline Name</label>
+            <input type="text" id="edit_service_name" class="form-input" readonly>
+          </div>
+
+          <div class="form-group">
+            <label for="edit_service_summary" class="form-label">Brief Summary <span class="required">*</span></label>
+            <textarea id="edit_service_summary" class="form-textarea" rows="2" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="edit_service_description" class="form-label">In-Depth Description <span class="required">*</span></label>
+            <textarea id="edit_service_description" class="form-textarea" rows="4" required></textarea>
+          </div>
+
+          <div class="grid-two">
+            <div class="form-group">
+              <label for="edit_service_price" class="form-label">Starting Price (KES) <span class="required">*</span></label>
+              <input type="number" id="edit_service_price" class="form-input font-mono" required min="500" step="500">
+            </div>
+
+            <div class="form-group">
+              <label for="edit_service_timeline" class="form-label">Estimated Timeline <span class="required">*</span></label>
+              <input type="text" id="edit_service_timeline" class="form-input" required placeholder="e.g. 3 to 7 business days">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="edit_service_deliverables" class="form-label">Deliverables (One per line)</label>
+            <textarea id="edit_service_deliverables" class="form-textarea" rows="4"></textarea>
+          </div>
+
+          <div class="toggle-group">
+            <label class="toggle-control">
+              <input type="checkbox" id="edit_service_active">
+              <span class="toggle-switch"></span>
+              <span class="toggle-label">
+                <strong>Active Service Offering</strong>
+                <small>Clients can submit booking briefs for this service</small>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline btn-sm" id="modal-cancel-btn">Cancel</button>
+          <button type="submit" class="btn btn-primary btn-sm" id="btn-save-service">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
